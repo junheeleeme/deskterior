@@ -57,15 +57,15 @@ const Index = ({posts, keywordList}) => {
     }  
 
     const uperCase = (str) => {
-        return str.replace(/^./, str[0].toUpperCase());
+        if(str !== undefined){
+            return str.replace(/^./, str[0].toUpperCase());
+        }
     }
-
-    console.log(uperCase(query.id))
 
     return(
     <> 
         <HeadInfo og_title={uperCase(query.id) && uperCase(query.id)} og_image={`https://www.deskterior.shop/primary/${query.id}.webp`} 
-                og_des={'데스크테리어샵 상품 카테고리 - ' + uperCase(query.id)}/>
+                og_des={'데스크테리어샵 상품 카테고리' + ' - ' + uperCase(query.id)}/>
 
         <AnimatePresence exitBeforeEnter={true}>
             
