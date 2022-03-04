@@ -1,4 +1,3 @@
-import HeadInfo from "./HeadInfo"
 import { useRouter } from "next/router"
 import { AnimatePresence, motion } from "framer-motion"
 import { MenuContext } from "../context/MenuContext"
