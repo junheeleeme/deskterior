@@ -19,7 +19,7 @@ const HeadInfo = ({og_title, og_image, og_des}) => {
             <meta name="twitter:image" content={og_image} />
             <meta name="twitter:domain" content="https://www.deskterior.shop" />
             
-            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+            <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
             <meta name="description" content={og_des ? '데스크테리어샵 쇼핑몰, 데스크 위에 나만의 인테리어를 꾸며보세요. ' + og_des : '데스크테리어샵 쇼핑몰, 데스크 위에 나만의 인테리어를 꾸며보세요.'}/>
             <title>데스크테리어샵 - {og_title}</title>
         </Head>
