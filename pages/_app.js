@@ -5,7 +5,6 @@ import { MenuContext } from '../context/MenuContext'
 import { ThumbContext } from '../context/ThumbContext'
 import { useEffect, useState } from 'react'
 
-
 const menu = [
   { 'name' : '데스크탑', 'slug': 'desktop', 'categoryId': 65, 'description': '데스크탑 - DESKTOP', '__typename': 'Category'},
   { 'name': '모니터', 'slug': 'monitor', 'categoryId': 66, 'description': '모니터 - MONITOR', '__typename': 'Category'},
