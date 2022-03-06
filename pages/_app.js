@@ -1,9 +1,10 @@
 import '../styles/globals.css'
-import getMenu from '../apollo/menu'
+import GoogleAnalyticsHOC from '../components/GoogleAnalyticsHoc'
 import Layout from '../layout/Layout'
 import { MenuContext } from '../context/MenuContext'
 import { ThumbContext } from '../context/ThumbContext'
 import { useEffect, useState } from 'react'
+
 
 const menu = [
   { 'name' : '데스크탑', 'slug': 'desktop', 'categoryId': 65, 'description': '데스크탑 - DESKTOP', '__typename': 'Category'},
@@ -17,10 +18,9 @@ const menu = [
 
 function MyApp({ Component, pageProps }) {
 
-
   const [thumb, setThumb] = useState();
   const _menu = menu.sort((a,b)=> a.categoryId-b.categoryId);
-
+  
   useEffect(()=> {
     if (localStorage.theme === 'dark' || localStorage.theme === undefined ) {
       document.documentElement.classList.add('dark')
@@ -31,13 +31,15 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>  
-      <MenuContext.Provider value={_menu}>
-        <ThumbContext.Provider value={{thumb, setThumb}}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </ThumbContext.Provider>
-      </MenuContext.Provider>
+      <GoogleAnalyticsHOC>
+        <MenuContext.Provider value={_menu}>
+          <ThumbContext.Provider value={{thumb, setThumb}}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ThumbContext.Provider>
+        </MenuContext.Provider>
+      </GoogleAnalyticsHOC>
     </>
   )
 }
