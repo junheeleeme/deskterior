@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import GoogleAnalyticsHOC from '../components/GoogleAnalyticsHoc'
+import GoogleAnalyticsHOC from '../components/GoogleAnalyticsHOC'
 import Layout from '../layout/Layout'
 import { MenuContext } from '../context/MenuContext'
 import { ThumbContext } from '../context/ThumbContext'
