@@ -13,6 +13,9 @@ const HeadInfo = ({og_title, og_image, og_des}) => {
             <meta property="og:type" content="website" />
             <meta property="og:image" content={og_image} />
 
+            <link rel="canonical" href="https://www.deskterior.shop" />
+            <meta name="naver-site-verification" content="be0c86ebd57e1d06c5e063b9a4082555d97457ae" />
+
             <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:title" content={og_title ? "데스크테리어샵 - " + og_title : "데스크테리어샵"} />
             <meta name="twitter:description" content={og_des ? og_des : '데스크테리어샵 데스크탑, 모니터, 노트북, 모니터암, 키보드/마우스, 주변기기'} />
